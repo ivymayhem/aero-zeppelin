@@ -19,6 +19,30 @@
 - Compiled with [Laravel Mix](https://laravel-mix.com)
 - Icons provided by [Feather Icons](https://feathericons.com)
 
+## Quick Start
+
+### Create a new site
+
+Either create a new site:
+
+```
+statamic new mysite ivymayhem/aero-zeppelin
+```
+
+Or install into an existing site:
+
+```
+php please starter-kit:install ivymayhem/aero-zeppelin
+```
+
+### Create a super user
+
+Just follow the instructions or run `php please make:user` and make yourself a `super` user.
+
+### Recompile the CSS
+
+To make sure there are no issues with Laravel Mix (e.g. "Unable to locate Mix file"), you should run `npx mix` after the Starter Kit was successfully installed.
+
 ## Upcoming
 
 This Starter Kit is actively maintained. Some of the upcoming features include ...
