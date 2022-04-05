@@ -1,0 +1,108 @@
+@import './plugins/highlightjs.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    h1 {
+        @apply text-5xl md:text-7xl mb-10 font-bold text-white;
+    }
+
+    h2 {
+        @apply text-3xl mt-10 mb-4 font-bold text-white;
+    }
+
+    h3 {
+        @apply text-2xl mt-8 mb-4 font-bold text-white;
+    }
+
+    h4 {
+        @apply text-xl mt-8 mb-4 font-bold text-white;
+    }
+
+    .content {
+        @apply text-lg px-6;
+    }
+
+    .content.page {
+        @apply px-0;
+    }
+
+    .content > * {
+        @apply max-w-3xl mx-auto;
+    }
+
+    .content .image.wide {
+        @apply max-w-6xl;
+    }
+
+    .content .image.wide figcaption {
+        @apply max-w-4xl mx-auto text-center;
+    }
+
+    .content p {
+        @apply leading-relaxed mb-6;
+    }
+
+    .content blockquote {
+        @apply text-3xl my-16 text-center text-white font-serif max-w-lg mx-auto;
+    }
+
+    .content > img,
+    .content p img {
+        @apply rounded-xl my-8 mx-auto;
+    }
+
+    .content .image {
+        @apply mx-auto my-10;
+    }
+
+    .content .image img {
+        @apply rounded-xl;
+    }
+
+    .content .image figcaption {
+        @apply mt-2;
+    }
+
+    .content .image.narrow figcaption {
+        @apply text-center;
+    }
+
+    .content p a {
+        @apply underline text-emerald-300 hover:text-emerald-50 transition-colors;
+    }
+
+    .content ul {
+        @apply my-5 pl-10 list-disc;
+    }
+
+    .content ol {
+        @apply my-5 pl-10 list-decimal;
+    }
+
+    .content li p {
+        @apply mb-0;
+    }
+
+    .content hr {
+        @apply my-12 border-zinc-700 max-w-[60%] mx-auto;
+    }
+
+    .content code {
+        @apply text-sm text-[#e0af68] bg-zinc-800 px-2 py-1 rounded-lg;
+    }
+
+    .content pre {
+        @apply bg-zinc-800 p-8 rounded-lg my-8;
+    }
+
+    .content pre code {
+        @apply block text-sm text-white bg-zinc-800 p-0 rounded-none font-mono whitespace-pre;
+    }
+
+    .content p ~ pre {
+        @apply mt-0;
+    }
+}

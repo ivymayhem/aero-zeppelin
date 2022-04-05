@@ -1,0 +1,26 @@
+<div class="mb-16">
+    <h2>
+        <a href="{{ url }}" class="hover:text-emerald-500 tracking-tight transition-colors">
+            {{ title }}
+        </a>
+    </h2>
+
+    <p>
+        <span class="text-zinc-500 text-sm uppercase font-medium">{{ date }}</span> &mdash;
+        {{ if excerpt }}
+            {{ excerpt | strip_tags | safe_truncate:280:... }}
+        {{ else }}
+            {{ post_excerpt :id="id" }}
+        {{ /if }}
+    </p>
+
+    {{ if tags }}
+        <div class="mt-5 inline-flex items-center">
+            {{ tags }}
+                <a href="{{ url }}" class="rounded-xl bg-emerald-900/50 text-sm px-3 py-1 text-white transition-colors hover:bg-emerald-900/80 mr-3">
+                    {{ title }}
+                </a>
+            {{ /tags }}
+        </div>
+    {{ /if }}
+</div>

@@ -1,0 +1,111 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: intro
+        field:
+          antlers: false
+          display: Intro
+          type: textarea
+          icon: textarea
+          instructions: 'This intro is shown just below the headline with a slightly more prominent appearance than the body text.'
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: content
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - h4
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - code
+            - codeblock
+            - horizontalrule
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          display: Content
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          container: assets
+          sets:
+            image:
+              display: Image
+              fields:
+                -
+                  import: image
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+      -
+        handle: author
+        field:
+          mode: select
+          display: Author
+          type: users
+          icon: users
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          max_items: 1
+      -
+        handle: excerpt
+        field:
+          antlers: false
+          display: Excerpt
+          type: textarea
+          icon: textarea
+          instructions: 'If empty, the first 280 characters of your article content will be used for the list view.'
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select
+title: Posts

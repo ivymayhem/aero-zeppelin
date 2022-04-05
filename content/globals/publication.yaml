@@ -1,0 +1,25 @@
+title: Publication
+data:
+  name: aero.zeppelin
+  logo: aerozeppelin-logo.svg
+  show_post_author: false
+  show_tags_navigation: true
+  social:
+    -
+      name: Twitter
+      url: 'https://twitter.com/MrMooky'
+      type: new_set
+      enabled: true
+      icon: icons/twitter.svg
+    -
+      name: GitHub
+      url: 'https://github.com/MrMooky'
+      type: new_set
+      enabled: true
+      icon: icons/github.svg
+    -
+      name: Email
+      url: 'mailto:andreas@ivymayhem.io'
+      icon: icons/mail.svg
+      type: new_set
+      enabled: true

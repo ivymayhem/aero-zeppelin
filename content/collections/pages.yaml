@@ -1,0 +1,10 @@
+title: Pages
+template: page
+layout: layout
+revisions: false
+route: '{slug}'
+sort_dir: asc
+structure:
+  root: true
+  max_depth: 1
+  slugs: true

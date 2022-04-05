@@ -1,0 +1,26 @@
+<header class="fixed top-0 left-0 w-full border-b border-zinc-800 bg-zinc-900/90 backdrop-blur-[6px]">
+    <div class="flex items-center mx-auto max-w-6xl px-6 py-8">
+        <a href="{{ link to="/" }}" class="block">
+            {{ if publication:name }}
+                <img src="{{ publication:logo }}" alt="" class="max-h-8">
+            {{ else }}
+                {{ publication:name }}
+            {{ /if }}
+        </a>
+
+        <div class="flex-1 pl-5 text-right">
+            <ul class="flex-1 inline-flex items-center">
+                {{ nav:top_nav select="title|url" }}
+                    <li class="ml-5">
+                        <a href="{{ url }}" class="hover:text-zinc-200 transition-colors{{ if is_current || is_parent }} text-white{{ /if }}">{{ title }}</a>
+                    </li>
+                {{ /nav:top_nav  }}
+                {{ if publication:show_tags_navigation }}
+                    <li class="ml-5">
+                        <a href="{{ link to="posts/tags" }}" class="hover:text-zinc-200 transition-colors{{ if is_current || is_parent }} text-white{{ /if }}">Tags</a>
+                    </li>
+                {{ /if }}
+            </ul>
+        </div>
+    </div>
+</header>

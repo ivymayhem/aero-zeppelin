@@ -1,0 +1,19 @@
+<footer class="py-8 text-sm text-zinc-500">
+    <div class="flex items-center mx-auto max-w-6xl px-5">
+        <div class="flex-1 pr-5">
+            &copy; {{ now format="Y" }} {{ publication:name }}
+        </div>
+
+        <div class="inline-flex items-center">
+            {{ publication:social }}
+                <a href="{{ url }}" class="ml-4 hover:text-emerald-100 transition-colors" aria-label="{{ name }}" target="_blank" rel="noopener">
+                    {{ if icon }}
+                        {{ svg :src="icon" class="h-5 w-5" }}
+                    {{ else }}
+                        {{ name }}
+                    {{ /if }}
+                </a>
+            {{ /publication:social }}
+        </div>
+    </div>
+</footer>

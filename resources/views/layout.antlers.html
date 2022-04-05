@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }} | {{ publication:name }}</title>
+        <link rel="stylesheet" href="{{ mix src='css/web.css' }}">
+    </head>
+    <body class="bg-zinc-900 font-sans leading-normal text-zinc-300/80">
+        {{ partial:partials/header }}
+
+        <div class="flex flex-col min-h-screen">
+            <div class="flex-1 pb-10 w-full mx-auto {{ current_template == 'posts/show' ? 'max-w-6xl' : 'max-w-3xl px-6' }} pt-40">
+                {{ template_content }}
+            </div>
+        
+            {{ partial:partials/footer }}
+        </div>
+
+        <script src="{{ mix src='/js/web.js' }}"></script>
+    </body>
+</html>

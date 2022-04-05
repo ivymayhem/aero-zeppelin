@@ -1,0 +1,15 @@
+<div class="image {{ width }}">
+    {{ if width == 'wide' }}
+        <img src="{{ glide:image_source width="1110" }}" alt="{{ image_source:alt }}" loading="lazy">
+    {{ elseif width == 'narrow' }}
+        <img src="{{ glide:image_source width="620" }}" alt="{{ image_source:alt }}" loading="lazy" class="mx-auto">
+    {{ else }}
+        <img src="{{ glide:image_source width="860" }}" alt="{{ image_source:alt }}" loading="lazy">
+    {{ /if }}
+
+    {{ if caption }}
+        <figcaption class="mb-8">
+            <p class="mb-0 text-sm text-zinc-500">{{ caption | nl2br }}</p>
+        </figcaption>
+    {{ /if }}
+</div>

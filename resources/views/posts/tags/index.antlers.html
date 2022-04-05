@@ -1,0 +1,12 @@
+<h1 class="text-center">Tags</h1>
+
+<div>
+    <ul class="flex flex-wrap text-xl lg:text-2xl justify-center">
+        {{ tags sort="title" }}
+            <li class="mx-4 my-4">
+                <span class="text-zinc-500">#</span>
+                <a href="{{ url }}" class="hover:text-emerald-100 transition-colors">{{ title }}</a>
+            </li>
+        {{ /tags }}
+    </ul>
+</div>

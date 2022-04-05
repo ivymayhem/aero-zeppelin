@@ -1,0 +1,14 @@
+export_paths:
+  - content
+  - app/Tags/PostExcerpt.php
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/css/web.css
+  - resources/js/web.js
+  - resources/views
+  - public/assets
+  - public/css
+  - package.json
+  - tailwind.config.js
+  - webpack.mix.js
+  - README.md

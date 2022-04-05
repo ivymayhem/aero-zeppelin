@@ -1,0 +1,49 @@
+{{ collection:posts paginate="12" as="posts" sort="date:desc" }}
+    {{ if no_results }}
+        <h2 class="italic tracking-tight text-center">Looks like there were no posts published yet.</h2>
+    {{ /if }}
+
+    {{ posts }}
+        {{ partial:partials/list-item }}
+    {{ /posts }}
+
+    {{ paginate }}
+        {{ if total_items > 12 }}
+            <div class="mt-10 text-center">
+                <ul class="inline-flex items-center justify-center">
+                    {{ if prev_page }}
+                        <li class="mx-2">
+                            <a href="{{ prev_page }}" class="block px-3 py-2 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-700 transition-colors">
+                                {{ svg src="/assets/icons/arrow-left.svg" class="h-5 w-5" }}
+                            </a>
+                        </li>
+                    {{ else }}
+                        <li class="mx-2">
+                            <span class="block px-3 py-2 border border-zinc-800 rounded-lg opacity-70">
+                                {{ svg src="/assets/icons/arrow-left.svg" class="h-5 w-5" }}
+                            </span>
+                        </li>
+                    {{ /if }}
+
+                    <li class="text-sm mx-5">
+                        {{ current_page }} / {{ total_pages }}
+                    </li>
+            
+                    {{ if next_page }}
+                        <li class="mx-2">
+                            <a href="{{ next_page }}" class="block px-3 py-2 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-700 transition-colors">
+                                {{ svg src="/assets/icons/arrow-right.svg" class="h-5 w-5" }}
+                            </a>
+                        </li>
+                    {{ else }}
+                        <li class="mx-2">
+                            <span class="block px-3 py-2 border border-zinc-800 rounded-lg opacity-70">
+                                {{ svg src="/assets/icons/arrow-right.svg" class="h-5 w-5" }}
+                            </span>
+                        </li>
+                    {{ /if }}
+                </ul>
+            </div>
+        {{ /if }}
+    {{ /paginate }}
+{{ /collection:posts }}

@@ -1,0 +1,9 @@
+{
+    "name": "ivymayhem/aero-zeppelin",
+    "extra": {
+        "statamic": {
+            "name": "aero.zeppelin",
+            "description": "aero.zeppelin is a minimalistic starter kit for Statamic."
+        }
+    }
+}

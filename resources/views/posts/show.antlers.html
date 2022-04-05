@@ -1,0 +1,79 @@
+<article class="content">
+    <div class="flex items-center mb-8">
+        <div class="flex-1 pr-5 text-sm">
+            {{ if publication:show_post_author }}
+                Written by <b class="text-white">{{ author:name }}</b><br>
+                <span class="">on {{ date }}</span>
+            {{ else }}
+                <span class="">{{ date }}</span>
+            {{ /if }}
+        </div>
+
+        {{ if tags }}
+            <div class="inline-flex items-center">
+                {{ tags }}
+                    <a href="{{ url }}" class="rounded-xl bg-emerald-900/50 text-sm px-3 py-1 text-white transition-colors hover:bg-emerald-900/80 ml-3">
+                        {{ title }}
+                    </a>
+                {{ /tags }}
+            </div>
+        {{ /if }}
+    </div>
+
+    <h1>{{ title }}</h1>
+
+    {{ if intro }}
+        <div class="mb-10">
+            <p class="text-2xl text-white">{{ intro | nl2br }}</p>
+        </div>
+    {{ /if }}
+
+    {{ content }}
+        {{ partial src="sets/{type}" }}
+    {{ /content  }}
+</article>
+
+<div class="mt-20 text-center flex items-center justify-center">
+    <div class="mx-2">
+        <a href="/" class="inline-flex items-center border border-zinc-700 text-sm px-4 py-2 rounded-full transition-colors hover:text-emerald-50 hover:border-zinc-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            All Articles
+        </a>
+    </div>
+
+    <div class="mx-2 relative" x-data="{ open: false }">
+        <span @click="open = ! open" class="inline-flex items-center border border-zinc-700 text-sm px-4 py-2 rounded-full transition-colors cursor-pointer hover:text-emerald-50 hover:border-zinc-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            Share
+        </span>
+
+        <div x-show="open" @click.outside="open = false" x-transition class="absolute bottom-14 -left-[40px] shadow-lg bg-zinc-700 p-1 rounded-lg w-[160px] text-sm" style="display:none;">
+            <ul class="text-left">
+                <li>
+                    <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ current_url }}" rel="noopener" target="_blank" class="px-3 py-1 block hover:bg-zinc-600 transition-colors rounded-lg hover:text-white">
+                        Share on Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ current_url }}" rel="noopener" target="_blank" class="px-3 py-1 block hover:bg-zinc-600 transition-colors rounded-md hover:text-white">
+                        Share on Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:info@example.com?&subject={{ title }}&cc=&bcc=&body={{ current_url }}" rel="noopener" class="px-3 py-1 block hover:bg-zinc-600 transition-colors rounded-md hover:text-white">
+                        Share via Email
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
