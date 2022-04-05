@@ -3,11 +3,12 @@ export_paths:
   - app/Tags/PostExcerpt.php
   - resources/blueprints
   - resources/fieldsets
-  - resources/css/web.css
-  - resources/js/web.js
+  - resources/css
+  - resources/js
   - resources/views
   - public/assets
   - public/css
+  - public/js
   - package.json
   - tailwind.config.js
   - webpack.mix.js
