@@ -25,5 +25,7 @@ This Starter Kit is actively maintained. Some of the upcoming features include .
 
 - Custom Fieldset "Video" to add YouTube and Vimeo media (with GDPR required consent)
 - Light Mode / Dark Mode switch
+- Custom SEO fields
+- Twitter Card and OG Image support
 
 If you have a feature wish, or other questions regarding the Starter Kit, feel free to get in touch at andreas@ivymayhem.io or on [Twitter](https://twitter.com/MrMooky).
