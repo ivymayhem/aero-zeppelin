@@ -5,7 +5,7 @@
         </div>
 
         <div class="inline-flex items-center">
-            {{ publication:social }}
+            {{ publication:footer_links }}
                 <a href="{{ url }}" class="ml-4 hover:text-emerald-100 transition-colors" aria-label="{{ name }}" target="_blank" rel="noopener">
                     {{ if icon }}
                         {{ svg :src="icon" class="h-5 w-5" }}
@@ -13,7 +13,7 @@
                         {{ name }}
                     {{ /if }}
                 </a>
-            {{ /publication:social }}
+            {{ /publication:footer_links }}
         </div>
     </div>
 </footer>

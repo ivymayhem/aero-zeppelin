@@ -5,6 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title ?? site:name }} | {{ publication:name }}</title>
+
+        <meta property="og:title" content="{{ title ?? site:name }} | {{ publication:name }}" />
+        <meta property="og:description" content="{{ excerpt ?? publication:description | strip_tags | safe_truncate:155:... }}" />
+        {{ if og_image }}
+            <meta property="og:image" content="{{ glide:og_image width="1200" }}">
+        {{ elseif publication:og_image }}
+            <meta property="og:image" content="{{ glide:publication:og_image width="1200" }}">
+        {{ /if }}
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ title ?? site:name }} | {{ publication:name }}">
+        <meta name="twitter:description" content="{{ excerpt ?? publication:description | strip_tags | safe_truncate:155:... }}">
+        {{ if twitter_card_image }}
+            <meta name="twitter:image" content="{{ glide:twitter_card_image width="600" }}">
+        {{ elseif publication:twitter_card_image }}
+            <meta name="twitter:image" content="{{ glide:publication:twitter_card_image width="600" }}">
+        {{ /if }}
+
         <link rel="stylesheet" href="{{ mix src='css/web.css' }}">
     </head>
     <body class="bg-zinc-900 font-sans leading-normal text-zinc-300/80">

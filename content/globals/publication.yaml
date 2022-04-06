@@ -1,22 +1,17 @@
 title: Publication
 data:
   name: aero.zeppelin
+  description: 'This is my publication. Some blog about nothing.'
   logo: aerozeppelin-logo.svg
   show_post_author: false
   show_tags_navigation: true
-  social:
+  footer_links:
     -
       name: Twitter
       url: 'https://twitter.com/MrMooky'
-      type: new_set
-      enabled: true
       icon: icons/twitter.svg
-    -
-      name: GitHub
-      url: 'https://github.com/MrMooky'
       type: new_set
       enabled: true
-      icon: icons/github.svg
     -
       name: Email
       url: 'mailto:andreas@ivymayhem.io'

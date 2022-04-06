@@ -11,6 +11,7 @@
 - Built with [TailwindCSS](https://tailwindcss.com)
 - Some minor [Alpine.js](https://alpinejs.dev) stuff for interactions
 - Custom Fieldset "Image" with options to include a caption and 3 different sizes
+- Twitter Card and OG Image support
 - Automatic image resizing with Glide
 
 ## Frontend Build Details
@@ -21,7 +22,9 @@
 
 ## Quick Start
 
-### Create a new site
+To get started with this Starter Kit, follow these steps:
+
+### 1. Create a new site
 
 Either create a new site:
 
@@ -35,21 +38,10 @@ Or install into an existing site:
 php please starter-kit:install ivymayhem/aero-zeppelin
 ```
 
-### Create a super user
+### 2. Create a super user
 
-Just follow the instructions or run `php please make:user` and make yourself a `super` user.
+Just follow the instructions shown in your terminal or run `php please make:user` and make yourself a `super` user.
 
-### Recompile the CSS
+### 3. Recompile the CSS
 
-To make sure there are no issues with Laravel Mix (e.g. "Unable to locate Mix file"), you should run `npx mix` after the Starter Kit was successfully installed.
-
-## Upcoming
-
-This Starter Kit is actively maintained. Some of the upcoming features include ...
-
-- Custom Fieldset "Video" to add YouTube and Vimeo media (with GDPR required consent)
-- Light Mode / Dark Mode switch
-- Custom SEO fields
-- Twitter Card and OG Image support
-
-If you have a feature wish, or other questions regarding the Starter Kit, feel free to get in touch at andreas@ivymayhem.io or on [Twitter](https://twitter.com/MrMooky).
+In case you have issues with Laravel Mix (e.g. "Unable to locate Mix file"), you can run `npx mix` after the Starter Kit was successfully installed.
