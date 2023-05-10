@@ -4,7 +4,7 @@ blueprint: pages
 title: 'About this Starter Kit'
 author: 2466b543-af56-4817-b11a-179ebe4f5839
 updated_by: 2466b543-af56-4817-b11a-179ebe4f5839
-updated_at: 1649056107
+updated_at: 1683712731
 content:
   -
     type: paragraph
@@ -17,7 +17,7 @@ content:
     content:
       -
         type: text
-        text: 'Turns out, I''m kind of picky when it comes to themes. And I didn''t like a single one they offered. So I said screw it, Statamic is better anyway. So let''s just create a theme that I like for a system that I know.'
+        text: "Turns out, I'm kind of picky when it comes to themes. And I didn't like a single one they offered. So I said screw it, Statamic is better anyway. So let's just create a theme that I like for a system that I know."
   -
     type: heading
     attrs:
@@ -31,7 +31,7 @@ content:
     content:
       -
         type: text
-        text: 'Finding a name... phew! I could have spend more time finding a name than actually building the template, setting everything up and putting it on the marketplace. Anyway, while thinking about something that doesn''t sound too '
+        text: "Finding a name... phew! I could have spend more time finding a name than actually building the template, setting everything up and putting it on the marketplace. Anyway, while thinking about something that doesn't sound too "
       -
         type: text
         marks:
@@ -40,7 +40,7 @@ content:
         text: generic
       -
         type: text
-        text: ', I was listening to Nirvana''s album Incesticide and I figured why not name it after a song. So yeah, here we are.'
+        text: ", I was listening to Nirvana's album Incesticide and I figured why not name it after a song. So yeah, here we are."
   -
     type: heading
     attrs:
@@ -48,19 +48,19 @@ content:
     content:
       -
         type: text
-        text: 'It''s really minimalistic and I love it 🤩'
+        text: "It's really minimalistic and I love it 🤩"
   -
     type: paragraph
     content:
       -
         type: text
-        text: 'You probably already noticed that, but it''s the bare minimum you''d expect from a blog theme. And I really like it that way. No fancy gimmicks, no clutter and air to breath.'
+        text: "You probably already noticed that, but it's the bare minimum you'd expect from a blog theme. And I really like it that way. No fancy gimmicks, no clutter and air to breath."
   -
     type: paragraph
     content:
       -
         type: text
-        text: 'I''m already planning a few updates, for example a switch to "Light Mode" and a few minor refinements. I''m also open to feature requests, but only if they don''t bloat the overall theme.'
+        text: "I'm already planning a few updates. I'm also open to feature requests, but only if they don't bloat the overall theme. DM me on Twitter, Link below."
   -
     type: heading
     attrs:

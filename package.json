@@ -17,8 +17,7 @@
         "laravel-mix": "^6.0",
         "postcss": "^8.4.5",
         "postcss-import": "^14.0.1",
-        "tailwindcss": "^3.0.23",
-        "vue-template-compiler": "^2.6.12"
+        "tailwindcss": "^3.3"
     },
     "dependencies": {
         "alpinejs": "^3.9.5",
